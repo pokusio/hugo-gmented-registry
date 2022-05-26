@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  hugo_cms:
+    image: quay.io/pokusio/website:${QUAY_OCI_IMAGE_TAG}
+    container_name: hugo_cms
+    command: hugo serve --watch --baseURL http://127.0.0.1:1313 --bind 0.0.0.0 --port 1313
+    # environment:
+      # - HUGO_BASE_URL=${HUGO_BASE_URL}
+    env_file:
+      - ./.cms.env
+    volumes:
+      - .:/ricard-io.io/hugo/src/:rw
+    ports:
+      - 0.0.0.0:1313:1313

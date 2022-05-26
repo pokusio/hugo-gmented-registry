@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  hugo_heroku:
+    image: quay.io/pokusio/website:${QUAY_OCI_IMAGE_TAG}
+    container_name: hugo_heroku
+    build:
+       context: .
+       dockerfile: heroku.alpine-golang.Dockerfile
+       args:
+         - HTTPD_OCI_IMAGE_TAG=${HTTPD_OCI_IMAGE_TAG}
+         - ALPINE_OCI_IMAGE_TAG=${ALPINE_OCI_IMAGE_TAG}
+         - GOLANG_VERSION=${GOLANG_VERSION}
+         - HUGO_VERSION=${HUGO_VERSION}
+         - HUGO_BASE_URL=${HUGO_BASE_URL}
+         - GIT_COMMIT_ID=${GIT_COMMIT_ID}
+         - CICD_BUILD_ID=${CICD_BUILD_ID}
+         - CICD_BUILD_TIMESTAMP=${CICD_BUILD_TIMESTAMP}
+    env_file:
+      - ./.heroku.env

@@ -10,6 +10,10 @@ The `Hugo Gmented Registry` is a registry referencing all `Hugo Gmented`-complia
 
 ## Submit your `hugo` theme
 
+Create and submit a PR, and :
+
+* the CI/CD will automatically run the compliance-tests, just like the comliance tests you ran in the pipeline attached to your hugo theme repository.
+* The Pokus Team will run acceptance tests if and only if all automated compliance tests complete with success.
 
 ## Architecture
 

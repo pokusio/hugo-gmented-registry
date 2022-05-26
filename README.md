@@ -64,9 +64,9 @@ cd ~/hugo-gmented-registry-work
 git checkout ${DESIRED_VERSION}
 
 #  install `Golang` :
-./debian.workstation.golang.setup.sh
-#  install `Hugo` :
-./debian.workstation.hugo-extended.setup.sh
+./utils/workstation/debian/9/golang.setup.sh
+#  install `Hugo` (from hugo sopurce code see [https://github.com/gohugoio/hugo.git] ) :
+./utils/workstation/debian/9/hugo-extended.setup.sh
 
 ```
 

@@ -60,19 +60,19 @@ LABEL io.pokus.hugo.version="${HUGO_VERSION}"
 LABEL io.pokus.git.commit.id="${GIT_COMMIT_ID}"
 LABEL io.pokus.cicd.build.id="${CICD_BUILD_ID}"
 LABEL io.pokus.cicd.build.timestamp="${CICD_BUILD_TIMESTAMP}"
-LABEL io.pokus.website="https://ricard-io.herokuapp.com"
-LABEL io.pokus.github.org="https://github.com/ricard-io"
-LABEL io.pokus.author="Jean-Baptiste Lasselle <jean.baptiste.ricard.io@gmail.com>"
-LABEL io.pokus.maintainer="Jean-Baptiste Lasselle <jean.baptiste.ricard.io@gmail.com>"
+LABEL io.pokus.website="https://pokus-io.herokuapp.com"
+LABEL io.pokus.github.org="https://github.com/pokus-io"
+LABEL io.pokus.author="Jean-Baptiste Lasselle <jean.baptiste.pokus.io@gmail.com>"
+LABEL io.pokus.maintainer="Jean-Baptiste Lasselle <jean.baptiste.pokus.io@gmail.com>"
 
-RUN mkdir -p /ricard-io.io/hugo/src/
-# COPY . /ricard-io.io/hugo/src/
-# COPY .git /ricard-io.io/hugo/src/
-RUN ls -allh /ricard-io.io/hugo/src/
+RUN mkdir -p /pokus-io.io/hugo/src/
+# COPY . /pokus-io.io/hugo/src/
+# COPY .git /pokus-io.io/hugo/src/
+RUN ls -allh /pokus-io.io/hugo/src/
 
-WORKDIR /ricard-io.io/hugo/src/
+WORKDIR /pokus-io.io/hugo/src/
 EXPOSE 1313
-# RUN export PATH=$PATH:/usr/local/go/bin && cd /ricard-io.io/hugo/src/ && hugo -b "${HUGO_BASE_URL}"
-# RUN echo 'export PATH=$PATH:/usr/local/go/bin' > /ricard-io.io/entrypoint.sh
-# RUN chmod +x /ricard-io.io/entrypoint.sh
-# ENTRYPOINT [ "/ricard-io.io/entrypoint.sh" ]
+# RUN export PATH=$PATH:/usr/local/go/bin && cd /pokus-io.io/hugo/src/ && hugo -b "${HUGO_BASE_URL}"
+# RUN echo 'export PATH=$PATH:/usr/local/go/bin' > /pokus-io.io/entrypoint.sh
+# RUN chmod +x /pokus-io.io/entrypoint.sh
+# ENTRYPOINT [ "/pokus-io.io/entrypoint.sh" ]

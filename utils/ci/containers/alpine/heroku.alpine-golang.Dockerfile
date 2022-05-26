@@ -86,8 +86,8 @@ LABEL io.pokus.golang.version="${GOLANG_VERSION}"
 LABEL io.pokus.hugo.version="${HUGO_VERSION}"
 LABEL io.pokus.website="https://pokusio.herokuapp.com"
 LABEL io.pokus.github.org="https://github.com/pokusio"
-LABEL io.pokus.author="Jean-Baptiste Lasselle <jean.baptiste.ricard.io@gmail.com>"
-LABEL io.pokus.maintainer="Jean-Baptiste Lasselle <jean.baptiste.ricard.io@gmail.com>"
+LABEL io.pokus.author="Jean-Baptiste Lasselle <jean.baptiste.pokus.io@gmail.com>"
+LABEL io.pokus.maintainer="Jean-Baptiste Lasselle <jean.baptiste.pokus.io@gmail.com>"
 
 # --- HEROKU ENV.
 #

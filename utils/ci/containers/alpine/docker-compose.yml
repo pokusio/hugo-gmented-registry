@@ -10,6 +10,6 @@ services:
     env_file:
       - ./.cms.env
     volumes:
-      - .:/ricard-io.io/hugo/src/:rw
+      - .:/pokus-io.io/hugo/src/:rw
     ports:
       - 0.0.0.0:1313:1313
